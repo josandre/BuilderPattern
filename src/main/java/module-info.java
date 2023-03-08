@@ -11,4 +11,5 @@ module com.example.builder {
 
     opens com.example.builder to javafx.fxml;
     exports com.example.builder;
+    exports com.example.builder.View;
 }

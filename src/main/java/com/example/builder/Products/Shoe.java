@@ -132,23 +132,6 @@ public class Shoe implements IComponent {
 
 
     @Override
-    public String toString() {
-        String hasShoeTongue = this.shoeTongue ? "Yes":"No";
-
-        return "Shoe{" +
-                "type='" + name + '\'' +
-                ", style='" + style.toString() + '\'' +
-                ", material=" + material.toString() +
-                ", sole=" + sole.toString() +
-                ", closing=" + closing.toString() +
-                ", insole=" + insole.toString() +
-                ", unions=" + unions.toString() +
-                ", shoeTongue=" + hasShoeTongue +
-                ", accessory=" + accesory.toString() +
-                '}';
-    }
-
-    @Override
     public void addComponent(Component component) {
         if(component instanceof Material){
             addMaterial(component);
