@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="689.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.builder.View.LIstShoe">
+   <children>
+      <Label layoutX="259.0" layoutY="31.0" text="Shoe selected" textFill="#0e4686">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblShoe" layoutY="157.0" prefHeight="71.0" prefWidth="693.0">
+        <columns>
+          <TableColumn fx:id="colName" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="colStyle" prefWidth="75.0" text="Style" />
+            <TableColumn fx:id="colMaterial" prefWidth="75.0" text="Material" />
+            <TableColumn fx:id="colSole" prefWidth="75.0" text="Sole" />
+            <TableColumn fx:id="colClosing" prefWidth="75.0" text="Closing" />
+            <TableColumn fx:id="colInsole" prefWidth="75.0" text="Insole" />
+            <TableColumn fx:id="colUnions" prefWidth="75.0" text="Unions" />
+            <TableColumn fx:id="colShoeTongue" prefWidth="83.0" text="ShoeTongue" />
+            <TableColumn fx:id="colAccessory" prefWidth="83.0" text="Accesory" />
+        </columns>
+      </TableView>
+      <Label layoutX="132.0" layoutY="65.0" prefHeight="30.0" prefWidth="418.0" text="This is the shoe created by the program " textFill="#0e4686">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="120.0" layoutY="101.0" text="if you want to change some properties, you can click the object" textFill="#1b228d">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Button layoutX="324.0" layoutY="296.0" mnemonicParsing="false" onAction="#handleback" text="Back" textFill="#0c1445" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="7.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/magic.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="537.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/shoes2.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

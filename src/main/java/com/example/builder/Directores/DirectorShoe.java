@@ -2,6 +2,7 @@ package com.example.builder.Directores;
 
 
 import com.example.builder.Constructores.Builder;
+import com.example.builder.Constructores.BuilderShoe;
 import com.example.builder.Enums.Styles;
 import com.example.builder.Products.Shoe;
 
@@ -11,18 +12,18 @@ public class DirectorShoe {
 
 
     public DirectorShoe(){
-
+        builderShoe = new BuilderShoe();
     }
 
     public Shoe createTennis(){
         Shoe shoe = this.builderShoe.createShoe();
         shoe.setStyle(Styles.Tennis);
-        this.builderShoe.buildAccessory("Costura", "Rojo");
-        this.builderShoe.buildClosing("Cordon", "Negro");
+        this.builderShoe.buildAccessory("Sewing", "Rojo");
+        this.builderShoe.buildClosing("Cord", "Negro");
         this.builderShoe.buildInsole("Foam", "Blanca");
-        this.builderShoe.buildMaterial("PLastico", "Claro");
-        this.builderShoe.buildSole("Goma", "Roja");
-        this.builderShoe.buildUnions("Pegamento", "Blanco");
+        this.builderShoe.buildMaterial("PLastic", "Claro");
+        this.builderShoe.buildSole("Glue", "Roja");
+        this.builderShoe.buildUnions("Glue", "Blanco");
         this.builderShoe.buildShoeTongue(true);
         return shoe;
     }
@@ -30,12 +31,12 @@ public class DirectorShoe {
     public Shoe createHighHeels(){
         Shoe shoe = this.builderShoe.createShoe();
         shoe.setStyle(Styles.HighHeels);
-        this.builderShoe.buildAccessory("Brillo", "Blanco");
+        this.builderShoe.buildAccessory("Glitter", "Blanco");
         this.builderShoe.buildClosing(" ", " ");
-        this.builderShoe.buildInsole("Basica", "Blanca");
+        this.builderShoe.buildInsole("Basic", "Blanca");
         this.builderShoe.buildMaterial("Cuerina", "Negro");
-        this.builderShoe.buildSole("Cuero", "Negro");
-        this.builderShoe.buildUnions("Costura", "Blanco");
+        this.builderShoe.buildSole("Leather", "Negro");
+        this.builderShoe.buildUnions("Sewing", "Blanco");
         this.builderShoe.buildShoeTongue(false);
 
         return shoe;
@@ -44,9 +45,9 @@ public class DirectorShoe {
     public Shoe createMocassin(){
         Shoe shoe = this.builderShoe.createShoe();
         shoe.setStyle(Styles.Moccasin);
-        this.builderShoe.buildAccessory(" ", " ");
+        this.builderShoe.buildAccessory("Any", " ");
         this.builderShoe.buildClosing("Zipper", "Negro");
-        this.builderShoe.buildMaterial("Cuero", "Negro");
+        this.builderShoe.buildMaterial("Leather", "Negro");
         return shoe;
     }
 
@@ -77,5 +78,7 @@ public class DirectorShoe {
     public void createShoeTongue(boolean sTongue){
         this.builderShoe.buildShoeTongue(sTongue);
     }
+
+
 
 }

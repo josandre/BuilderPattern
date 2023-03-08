@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="689.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.builder.View.MainScene">
+   <children>
+      <Label layoutX="213.0" layoutY="38.0" text="Welcome to NIKE-O" textFill="#344482">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="115.0" fitWidth="83.0" layoutX="451.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/shoes.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="238.0" layoutY="72.0" text="You builder shoes" textFill="#344482">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="96.0" fitWidth="107.0" layoutX="115.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/Snickers.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnTennis" layoutX="134.0" layoutY="291.0" mnemonicParsing="false" onAction="#handleTennis" text="Sneacker" textFill="#0d226f" />
+      <ImageView fitHeight="76.0" fitWidth="96.0" layoutX="303.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/highHeels.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="297.0" layoutY="291.0" mnemonicParsing="false" onAction="#HandleHighHeels" text="HighHeels" textFill="#0d226f" />
+      <ImageView fitHeight="89.0" fitWidth="76.0" layoutX="457.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/mocassin.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnMocassin" layoutX="460.0" layoutY="291.0" mnemonicParsing="false" onAction="#handleMocassin" text="Mocassin" textFill="#0d226f" />
+      <Label layoutX="208.0" layoutY="113.0" text="Choose the shoes you want" textFill="#344482">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

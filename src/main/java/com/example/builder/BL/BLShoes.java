@@ -12,9 +12,11 @@ public class BLShoes
     private DirectorShoe directorShoe = new DirectorShoe();
     private static BLShoes blInstance;
 
-    private DAOShoe daoShoe;
+    private DAOShoe daoShoe = new DAOShoe();
 
-    public BLShoes getBlInstance(){
+    private Shoe currentShoe;
+
+    public static BLShoes getBlInstance(){
         if(blInstance == null){
             blInstance = new BLShoes();
         }
@@ -56,33 +58,48 @@ public class BLShoes
         int amountOfLetters = 4;
 
         for(int i = 1; i <= amountOfLetters; i++){
-            int letter = (int) (Math.random() * 10) - 1;
-
+            int abcLetter = (int) (Math.random() * 17) - 1;
+            int vocal = (int) (Math.random() * 4) - 1;
             if(!(i%2 == 0)){
-                name.append(abc.get(letter));
+                name.append(abc.get(abcLetter));
             }else {
-                name.append(vocales.get(letter));
+                name.append(vocales.get(vocal));
             }
         }
 
         return name.toString();
     }
 
+    private int createId(){
+        return (int)(Math.random() * 100) -1;
+    }
+
     public Shoe createTennis(){
         Shoe tennis = this.directorShoe.createTennis();
+        tennis.setName(generateShoeName());
+        tennis.setId(createId());
         this.daoShoe.getDataBase().add(tennis);
+        this.currentShoe = tennis;
         return tennis;
     }
 
+
+
     public Shoe createHighHeels(){
         Shoe highHeels = this.directorShoe.createHighHeels();
+        highHeels.setName(generateShoeName());
+        highHeels.setId(createId());
         this.daoShoe.getDataBase().add(highHeels);
+        this.currentShoe = highHeels;
         return highHeels;
     }
 
     public Shoe createMocassin(){
         Shoe mocassin = this.directorShoe.createMocassin();
+        mocassin.setName(generateShoeName());
+        mocassin.setId(createId());
         this.daoShoe.getDataBase().add(mocassin);
+        this.currentShoe = mocassin;
         return mocassin;
     }
 
@@ -112,6 +129,16 @@ public class BLShoes
 
     public void createShoeTongue(boolean sTongue){
         this.directorShoe.createShoeTongue(sTongue);
+    }
+
+    public Shoe getShoeById(int id){
+        Shoe shoe = this.daoShoe.getShoeByID(id);
+        this.currentShoe = shoe;
+        return shoe;
+    }
+
+    public Shoe getCurrentShoe(){
+        return this.currentShoe;
     }
 
 

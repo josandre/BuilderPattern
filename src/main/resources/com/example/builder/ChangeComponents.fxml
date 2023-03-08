@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="689.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.builder.View.ChangeComponents">
+   <children>
+      <Label layoutX="154.0" layoutY="28.0" prefHeight="31.0" prefWidth="381.0" text="Welcome to changing components" textFill="#181e68">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="183.0" layoutY="59.0" text="In this section you can change the components of your shoe" />
+      <ComboBox fx:id="boxMaterial" layoutX="140.0" layoutY="129.0" prefWidth="150.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:id="1" fx:value="Plastic" />
+               <String fx:id="2" fx:value="Cuerina" />
+               <String fx:id="3" fx:value="Leather" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <Label fx:id="material" layoutX="78.0" layoutY="130.0" prefHeight="17.0" prefWidth="75.0" text="Material" textFill="#0d253c">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="sole" layoutX="402.0" layoutY="246.0" prefHeight="17.0" prefWidth="75.0" text="Sole" textFill="#0d253c">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="boxSole" layoutX="439.0" layoutY="244.0" prefWidth="150.0" >
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:id="4" fx:value="Glue" />
+               <String fx:id="5" fx:value="Leather" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <Label fx:id="closing" layoutX="382.0" layoutY="119.0" prefHeight="17.0" prefWidth="75.0" text="Closing" textFill="#0d253c">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="boxClosing" layoutX="439.0" layoutY="118.0" prefWidth="150.0" >
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:id="6" fx:value="Cord" />
+               <String fx:id="7" fx:value="Zipper" />
+               <String fx:id="8" fx:value="Any" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <Label fx:id="insole" layoutX="382.0" layoutY="189.0" prefHeight="17.0" prefWidth="75.0" text="Insole" textFill="#0d253c">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="boxInSole" layoutX="439.0" layoutY="188.0" prefWidth="150.0" >
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:id="9" fx:value="Foam" />
+               <String fx:id="10" fx:value="Basic" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <Label fx:id="unions" layoutX="84.0" layoutY="245.0" prefHeight="17.0" prefWidth="75.0" text="Unions" textFill="#0d253c">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="boxAccessory" layoutX="140.0" layoutY="188.0" prefWidth="150.0" >
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:id="11" fx:value="sewing" />
+               <String fx:id="12" fx:value="Glitter" />
+               <String fx:id="14" fx:value="Any" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <Label fx:id="shoeTongue" layoutX="42.0" layoutY="307.0" prefHeight="22.0" prefWidth="111.0" text="ShoeTongue" textFill="#0d253c">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="boxShoeTongue" layoutX="140.0" layoutY="305.0" prefWidth="150.0" >
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:id="15" fx:value="Yes" />
+               <String fx:id="16" fx:value="No" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <Label fx:id="accessory" layoutX="62.0" layoutY="189.0" prefHeight="22.0" prefWidth="111.0" text="Accessory" textFill="#0d253c">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="boxUnions" layoutX="140.0" layoutY="244.0" prefWidth="150.0" >
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:id="17" fx:value="Glue" />
+               <String fx:id="18" fx:value="sewing" />
+
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <Button layoutX="318.0" layoutY="349.0" mnemonicParsing="false" onAction="#handleSave" text="Save" textFill="#0e1c54" />
+   </children>
+</AnchorPane>
